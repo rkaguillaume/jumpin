@@ -1,5 +1,9 @@
 Rails.application.routes.draw do
   devise_for :users
+
+  get '/service-worker.js' => "service#service_worker"
+  get '/manifest.json' => "service#manifest"
+
   root to: 'lines#index'
   resources :lines, only: [:index, :show]
   resources :stops, only: [:show], shallow: true do
