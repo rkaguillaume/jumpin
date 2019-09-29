@@ -68,8 +68,6 @@ GEM
       railties (>= 4.1.0, < 6.0)
       responders
       warden (~> 1.2.3)
-    devise-guests (0.6.1)
-      devise
     domain_name (0.5.20180417)
       unf (>= 0.0.5, < 1.0.0)
     dotenv (2.7.1)
@@ -234,7 +232,6 @@ DEPENDENCIES
   bootsnap
   bootstrap
   devise
-  devise-guests
   dotenv-rails
   geocoder
   http
@@ -261,4 +258,4 @@ RUBY VERSION
    ruby 2.5.3p105
 
 BUNDLED WITH
-   2.0.1
+   2.0.2
