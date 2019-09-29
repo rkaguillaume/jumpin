@@ -17,18 +17,6 @@
 
     <%= link_to "Trouver un arrêt", lines_path %>
 
-    <% if current_user %>
-      <h3 class="label">
-        Mes arrêts favoris
-      </h3>
-      <div id="favorites-stop" data-favorites-count="<%= current_user.favorites.count %>">
-        <% current_user.favorites.each do |favorite| %>
-          <%= render "favorites/favorite", favorite: favorite %>
-        <% end %>
-      </div>
-
-    <% end %>
-
       <%= link_to "Se connecter", new_user_session_path %>
       <%= link_to "Créer un compte", new_user_registration_path %>
       <p class="favorites-text">Sans compte, les arrêts sont sauvegardés dans vos cookies. Pour sauvegarder definitivement un arrêt, créez vous un compte.</p>
