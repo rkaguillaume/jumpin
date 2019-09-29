@@ -1,7 +1,7 @@
 class Stops::NearsController < ApplicationController
 
   def show
-    @nearest_stop = current_or_guest_user.stops.near(user_coordinates).first
+    @nearest_stop = current_user.stops.near(user_coordinates).first
 
     if @nearest_stop.present?
       respond_to do |format|

@@ -8,12 +8,6 @@
   </span>
 <% end %>
 
-<% content_for(:action) do %>
-  <div id="fav">
-    <%= render "favorites/actions", stop: @stop %>
-  </div>
-<% end %>
-
 <div id="stop" class="flex-grow-1 d-flex" data-stop-id="<%= @stop.tbm_stop_id %>" data-line-code="<%= @stop.code %>">
 
   <div id="main-passage" class="main-passage d-flex flex-column align-items-center justify-content-center flex-grow-1">

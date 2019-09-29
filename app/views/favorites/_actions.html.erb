@@ -1,9 +1,0 @@
-<% if current_or_guest_user.favorited?(stop) %>
-  <%= link_to favorite_path(current_or_guest_user.favorite(stop)), method: :delete, remote: true do %>
-    <%= render "favorites/star", active: true %>
-  <% end %>
-<% else %>
-  <%= link_to stop_favorites_path(stop), method: :post, remote: true do %>
-    <%= render "favorites/star", active: false %>
-  <% end %>
-<% end %>
