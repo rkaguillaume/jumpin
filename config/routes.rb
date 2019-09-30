@@ -5,7 +5,12 @@ Rails.application.routes.draw do
   get '/manifest.json' => "service#manifest"
   get '/account' => "pages#account"
 
+  authenticated do
+    root :to => 'favorites#index', as: :authenticated
+  end
+
   root to: 'lines#index'
+  resources :favorites, only: [:index]
   resources :lines, only: [:index, :show]
   resources :stops, only: [:show], shallow: true do
     resources :favorites, only: [:create, :destroy]

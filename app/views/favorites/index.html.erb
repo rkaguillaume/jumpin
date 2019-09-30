@@ -1,0 +1,19 @@
+<% content_for(:title, "Mes arrêts favoris") %>
+
+<% @favorites.each do |favorite| %>
+    <div class="d-flex flex-row mt-3">
+       <div class="circle-transport-type mr-1 ml-3 <%= 'long-code' if favorite.stop.direction.line.long_code? %>" style="background-color:#<%= favorite.stop.direction.line.background %>;">
+      <%= favorite.stop.direction.line.code %>
+    </div>
+    <span class="stop-name">
+      <strong><%= favorite.stop.direction.line.name %></strong> <br>
+      <small id="stop-destination"><%= favorite.stop.direction.name %></small>
+    </span>
+    <div>
+      <%= link_to "voir", stop_path(favorite.stop) %>
+    </div>
+    </div>
+
+<% end %>
+
+
