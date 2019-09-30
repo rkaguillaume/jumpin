@@ -20,7 +20,7 @@ gem 'acts_as_list'
 gem 'pg_search'
 gem 'geocoder'
 gem 'inline_svg'
-
+gem 'rails_real_favicon'
 
 group :development do
   gem 'web-console', '>= 3.3.0'
