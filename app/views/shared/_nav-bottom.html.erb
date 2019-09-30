@@ -1,38 +1,24 @@
 <div class="tabBar">
   <div class="d-flex flex-row justify-content-around pt-2 pb-2">
     <div>
-      <%= link_to lines_path, class: "d-flex flex-wrap flex-column align-items-center" do %>
+      <%= link_to lines_path, class: "d-flex flex-wrap flex-column align-items-center #{active_link(lines_path)}" do %>
         <i class="fas fa-directions"></i>
         <span>Lignes</span>
       <% end %>
     </div>
     <div>
-      <a href="#" class="d-flex flex-column align-items-center">
-      <%= link_to maps_path, class: "d-flex flex-wrap flex-column align-items-center" do %>
+      <%= link_to maps_path, class: "ripple d-flex flex-wrap flex-column align-items-center #{active_link(maps_path)}" do %>
         <i class="fas fa-map-marker-alt"></i>
         <span>Carte</span>
       <% end %>
       </a>
     </div>
     <div>
-      <%= link_to favorites_path, class: "d-flex flex-wrap flex-column align-items-center" do %>
+      <%= link_to favorites_path, class: "d-flex flex-wrap flex-column align-items-center #{active_link(favorites_path)}" do %>
         <i class="far fa-star"></i>
         <span>Favoris</span>
       <% end %>
       </a>
-    </div>
-    <div>
-      <% if user_signed_in? %>
-        <%= link_to account_path, class: "d-flex flex-wrap flex-column align-items-center" do %>
-          <i class="fas fa-sliders-h"></i>
-          <span>Compte</span>
-        <% end %>
-      <% else %>
-        <%= link_to new_user_session_path, class: "d-flex flex-wrap flex-column align-items-center" do %>
-          <i class="fas fa-sliders-h"></i>
-          <span>Compte</span>
-        <% end %>
-      <% end %>
     </div>
   </div>
 </div>
