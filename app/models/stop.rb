@@ -1,7 +1,7 @@
 class Stop < ApplicationRecord
   belongs_to :direction
   has_one :line, through: :direction
-  # has_many :favorites
+  has_many :favorites
 
   geocoded_by :location
   after_validation :geocode

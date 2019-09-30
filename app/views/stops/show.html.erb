@@ -7,6 +7,11 @@
       <strong><%= @stop.direction.line.name %></strong> <br>
       <small id="stop-destination"><%= @stop.direction.name %></small>
     </span>
+    <div>
+        <%= link_to stop_favorites_path(@stop), method: :post, remote: true do %>
+          add
+        <% end %>
+    </div>
   </div>
 <% end %>
 

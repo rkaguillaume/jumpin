@@ -15,9 +15,10 @@
       </a>
     </div>
     <div>
-      <a href="#" class="d-flex flex-column align-items-center">
+      <%= link_to favorites_path, class: "d-flex flex-wrap flex-column align-items-center" do %>
         <i class="far fa-star"></i>
         <span>Favoris</span>
+      <% end %>
       </a>
     </div>
     <div>
@@ -35,3 +36,4 @@
     </div>
   </div>
 </div>
+
