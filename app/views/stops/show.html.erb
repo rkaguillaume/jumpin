@@ -1,11 +1,13 @@
 <% content_for(:title) do %>
-  <div class="circle-transport-type mr-1 ml-3 <%= 'long-code' if @stop.direction.line.long_code? %>" style="background-color:#<%= @stop.direction.line.background %>;">
-    <%= @stop.direction.line.code %>
+  <div class="d-flex flex-row">
+    <div class="circle-transport-type mr-1 ml-3 <%= 'long-code' if @stop.direction.line.long_code? %>" style="background-color:#<%= @stop.direction.line.background %>;">
+      <%= @stop.direction.line.code %>
+    </div>
+    <span class="stop-name">
+      <strong><%= @stop.direction.line.name %></strong> <br>
+      <small id="stop-destination"><%= @stop.direction.name %></small>
+    </span>
   </div>
-  <span class="stop-name">
-    <strong><%= @stop.direction.line.name %></strong> <br>
-    <small id="stop-destination"><%= @stop.direction.name %></small>
-  </span>
 <% end %>
 
 <div id="stop" class="flex-grow-1 d-flex" data-stop-id="<%= @stop.tbm_stop_id %>" data-line-code="<%= @stop.code %>">

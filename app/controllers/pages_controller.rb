@@ -1,7 +1,11 @@
 class PagesController < ApplicationController
-  # skip_before_action :authenticate_user!, only: [:home]
+  before_action :authenticate_user!, only: [:account]
 
   def home
     @lines = Line.all
+  end
+
+  def account
+
   end
 end

@@ -1,0 +1,12 @@
+<% content_for(:title, "Mon compte") %>
+
+<div class="container">
+  <div>
+    <p>Bzinvenue sur votre compte, vous pourrez bientôt ajoutez vos arrêts favoris</p>
+  </div>
+  <div class="d-flex flex-column mt-5">
+    <%= link_to "Se déconnecter",  destroy_user_session_path, method: :delete %>
+    <%= link_to "Aidez-nous à améliorer Jump In", new_review_path %>
+  </div>
+</div>
+
