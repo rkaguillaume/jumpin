@@ -9,6 +9,10 @@ class FavoritesController < ApplicationController
     @stop = Stop.find(params[:stop_id])
     @favorite = @stop.favorites.new(user: current_user)
     @favorite.save
+
+    respond_to do |format|
+      format.js
+    end
   end
 
   def destroy
@@ -18,5 +22,6 @@ class FavoritesController < ApplicationController
     respond_to do |format|
       format.js
     end
+
   end
 end
