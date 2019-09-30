@@ -3,6 +3,7 @@ Rails.application.routes.draw do
 
   get '/service-worker.js' => "service#service_worker"
   get '/manifest.json' => "service#manifest"
+  get '/account' => "pages#account"
 
   root to: 'lines#index'
   resources :lines, only: [:index, :show]
