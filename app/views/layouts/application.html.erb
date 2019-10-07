@@ -7,6 +7,11 @@
     <link rel="manifest" href="/manifest.json">
     <%= render 'application/favicon' %>
 
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+
+    <link rel="apple-touch-startup-image" href="assets/splashimg.png" media="(device-width: 320px) and (device-height: 568px) and (-webkit-device-pixel-ratio: 2) and (orientation: portrait)">
+    <link rel="apple-touch-startup-image" href="assets/splashimg.png" media="(device-width: 375px) and (device-height: 667px) and (-webkit-device-pixel-ratio: 2) and (orientation: portrait)">
+
     <%= csrf_meta_tags %>
     <%= action_cable_meta_tag %>
     <%= stylesheet_pack_tag 'application', media: 'all' %>
