@@ -1,4 +1,4 @@
-$flyout-max-width: 300px;
+$flyout-max-width: 100%;
 
 .flyout {
   overflow-x: auto;
@@ -7,7 +7,7 @@ $flyout-max-width: 300px;
   top: 0;
   bottom: 0;
   left: 0;
-  background: white;
+  background: #1c1c1c;
   width: 100%;
   max-width: $flyout-max-width;
   box-shadow: 0 0 0 5000px rgba(0, 0, 0, 0.3);
@@ -22,13 +22,17 @@ $flyout-max-width: 300px;
   .flyout-header {
     border-bottom: 1px solid #DDD;
     padding: 10px;
-    background-color: #212529;
-    height: 100px;
+    height: 175px;
     color: #C6C6C6;
     font-size: 0.8em;
     .flyout-header-content {
-      padding-top: 30px;
+      padding-top: 5px;
       padding-left: 12px;
+    }
+    .text-header {
+      color: #60b1ce;
+      padding-top: 12px;
+      font-size: 16px;
     }
   }
   .flyout-bottom {
@@ -39,7 +43,6 @@ $flyout-max-width: 300px;
     padding-bottom: 10px;
     width: 100%;
     font-size: 0.6em;
-    background-color: #f9f9f9;
     color: #a2a2a2;
   }
   .flyout-logo {
@@ -71,14 +74,18 @@ $flyout-max-width: 300px;
       align-items: center;
       height: 50px;
       padding-left: 22px;
-      color: inherit;
+      color: #fff;
+      font-weight: 300;
+      i {
+        padding-right: 10px;
+      }
     }
     & > a {
-      border-top: 1px solid #DDD;
+      border-top: 1px solid #444;
     }
   }
   .label {
-    border-top: 1px solid #DDD;
+    border-top: 1px solid #444;
     padding-left: 22px;
     padding-top: 10px;
   }

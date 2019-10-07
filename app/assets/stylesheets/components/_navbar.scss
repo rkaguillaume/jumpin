@@ -1,7 +1,6 @@
 $navbar-height: 60px;
 
 .navbar {
-  border-bottom: 1px solid #E0E0E0;
   flex-wrap: nowrap;
   padding: 6px;
   height: $navbar-height;
@@ -9,8 +8,22 @@ $navbar-height: 60px;
   top: 0;
   left: 0;
   width: 100%;
-  background: #fefefe;
   z-index: 1000;
+  color: black;
+  font-weight: 300;
+}
+
+.navbar-secondary {
+  flex-wrap: nowrap;
+  padding: 6px;
+  height: $navbar-height;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1000;
+  color: white;
+  font-weight: 300;
 }
 
 .navbar-right {

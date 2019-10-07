@@ -6,12 +6,16 @@
       </a>
     </div>
 
-    <div class="flyout-header-content">
+    <div class="flyout-header-content d-flex flex-column aling-items-center text-center">
+      <div class="avatar-center">
+        <%= image_tag ("faviconjumpin.png"), class: "avatar" %>
+      </div>
       <% if user_signed_in?  %>
-        <span class="float-left">Content de te revoir !</span>
-        <span class="float-right"><%= current_user.email %></span>
+        <span class="text-header">Content de te revoir !</span>
+        <span ><%= current_user.email %></span>
       <% else %>
-        <span>Bienvenue sur Jump In</span>
+        <%= link_to "Se connecter", new_user_session_path, class: "text-header" %>
+        <span>Bienvenue sur JumpIn Bordeaux</span>
       <% end %>
     </div>
 
@@ -20,19 +24,27 @@
 
   <div class="flyout-links">
 
-    <%= link_to "Trouver un arrêt", lines_path %>
+    <%= link_to lines_path do %>
+      <i class="fas fa-directions"></i> Trouver un arrêt
+    <% end %>
 
 
     <% if !user_signed_in?  %>
-      <%= link_to "Se connecter", new_user_session_path %>
+      <%= link_to new_user_session_path do %>
+        <i class="fas fa-sign-in-alt"></i> Se connecter
+      <% end %>
       <%= link_to "Créer un compte", new_user_registration_path %>
-      <p class="favorites-text">Sans compte, les arrêts sont sauvegardés dans vos cookies. Pour sauvegarder definitivement un arrêt, créez vous un compte.</p>
+      <p class="favorites-text">En te créant un compte tu pourras enregistrer tes arrêts préférés dans "mes favoris" et y avoir accès rapidement</p>
     <% else %>
-      <%= link_to "Se déconnecter",  destroy_user_session_path, method: :delete %>
+      <%= link_to destroy_user_session_path, method: :delete do %>
+        <i class="fas fa-sign-out-alt"></i> Se déconnecter
+      <% end %>
     <% end %>
 
     <div>
-      <%= link_to "Aidez-nous à améliorer JumpIn", new_review_path %>
+      <%= link_to new_review_path  do %>
+        <i class="far fa-comment-dots"></i> Aidez-nous à améliorer JumpIn
+      <% end %>
     </div>
 
   </div>

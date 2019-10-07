@@ -1,8 +1,14 @@
 <% content_for(:title, "Choisir une ligne") %>
 <% content_for(:body_class, "with-search") %>
+<% content_for :nav, render('shared/navbar_secondary') %>
 
-<%= render "searches/search" %>
+<div class="search-area">
+  <%= render "searches/search" %>
+</div>
 
+<div class="search-info">
+  Lignes de Tram & de bus
+</div>
 <ul class="list-group">
   <% @lines.each do |line| %>
    <li class="list-group-item d-flex align-items-baseline">

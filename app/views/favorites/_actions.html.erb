@@ -1,5 +1,4 @@
 <% if current_user %>
-
   <% if current_user.favorited?(stop) %>
     <%= link_to favorite_path(current_user.favorite(stop)), method: :delete, remote: true do %>
       <%= render "favorites/star", active: true %>
@@ -9,5 +8,8 @@
       <%= render "favorites/star", active: false %>
     <% end %>
   <% end %>
-
+<% else %>
+  <%= link_to new_user_session_path do %>
+    <%= render "favorites/star", active: false %>
+  <% end %>
 <% end %>
