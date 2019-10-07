@@ -18,7 +18,7 @@ flyout();
 initCountdown();
 initMap();
 initFullscreen();
-
+initMapbox();
 
 window.initMapbox = initMapbox;
 window.searchStop = searchStop;
