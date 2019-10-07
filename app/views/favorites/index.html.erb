@@ -1,10 +1,20 @@
 <% content_for(:title, "Mes arrêts favoris") %>
+<% content_for :nav, render('shared/navbar_secondary') %>
 
+<div class="search-area">
+  <%= render "searches/search" %>
+</div>
+
+<div class="search-info">
+  Tous mes arrêts favoris
+</div>
+
+<div class="favorites-items">
 <% @favorites.each do |favorite| %>
  <%= link_to stop_path(favorite.stop), class: "favorites-index" do %>
-  <div class="d-flex flex-row align-items-center justify-content-between mt-3">
+  <div class="d-flex flex-row align-items-center justify-content-between pt-2 pb-2 border-bottom">
     <div class="d-flex flex-row">
-      <div class="circle-transport-type mr-1 ml-3 <%= 'long-code' if favorite.stop.direction.line.long_code? %>" style="background-color:#<%= favorite.stop.direction.line.background %>;">
+      <div class="circle-transport-type mr-1 ml-3 mr-3 <%= 'long-code' if favorite.stop.direction.line.long_code? %>" style="background-color:#<%= favorite.stop.direction.line.background %>;">
         <%= favorite.stop.direction.line.code %>
       </div>
       <span class="stop-name">
@@ -24,6 +34,7 @@
   </div>
       <% end %>
 <% end %>
+</div>
 
 
 
