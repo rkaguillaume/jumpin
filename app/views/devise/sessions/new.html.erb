@@ -2,20 +2,21 @@
 
 <div class="log-in-form-container">
   <%= simple_form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
-    <div class="form-inputs form-inputs-log-in">
+    <div class="form-inputs">
       <%= f.input :email,
                   required: false,
                   autofocus: true,
-                  input_html: { autocomplete: "email" } %>
+                  input_html: { autocomplete: "email", class: "form-input mt-n2" } %>
       <%= f.input :password,
                   required: false,
                   label: 'Mot de passe',
-                  input_html: { autocomplete: "current-password" } %>
-      <%= f.input :remember_me, label: 'Se souvenir de moi', as: :boolean if devise_mapping.rememberable? %>
+                  input_html: { autocomplete: "current-password", class: "form-input mt-n2"  } %>
+      <%= f.input :remember_me, :as => :hidden, :value => true if devise_mapping.rememberable? %>
+
     </div>
 
     <div class="form-actions form-actions-log-in">
-      <button type="button" class="btn btn-dark">
+      <button type="button" class="btn btn-red btn-lg">
         <%= f.button :submit, "Se connecter" %>
       </button>
     </div>

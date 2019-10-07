@@ -1,3 +1,7 @@
+form {
+  width: 85%;
+}
+
 .log-in-form-container {
   display: flex;
   align-items: center;
@@ -21,3 +25,19 @@
   padding-top: 30px;
 }
 
+.form-input {
+  background: #0000;
+  border: 0;
+  padding: 0;
+  outline: none;
+  border-radius: 0;
+  border-bottom: 1px solid #6e6e6e;
+}
+
+.form-input:focus {
+  color: #495057;
+  background-color: #fff;
+  border-color: #ee5f5b;
+  outline: 0;
+  box-shadow: none;
+}
