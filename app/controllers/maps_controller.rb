@@ -15,8 +15,9 @@ class MapsController < ApplicationController
 
     @user_coordinates = [params[:lng], params[:lat]]
 
-    # respond_to do |format|
-    #   format.js # render maps/index.js.erb
-    # end
+    respond_to do |format|
+      format.js { render 'index.js.erb'}
+      format.html { render 'index.html.erb'}
+    end
   end
 end

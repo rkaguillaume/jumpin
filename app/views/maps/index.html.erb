@@ -1,12 +1,7 @@
 <% content_for(:title, "Carte") %>
 
 <div class="container">
-  Fonctionnalitée à venir
+  <div id="map-wrapper" class="map-wrapper d-none"></div>
 </div>
 
-<div
-  id="map"
-  class="map"
-  data-markers="<%= @markers.to_json %>"
-  data-mapbox-api-key="<%= ENV['MAPBOX_API_KEY'] %>">
-</div>
+

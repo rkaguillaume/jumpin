@@ -5,3 +5,4 @@ mapWrapper.innerHTML = "<%= j render 'maps/map', markers: @markers %>";
 
 // launch mapbox
 initMapbox(<%= raw @user_coordinates.to_json %>);
+console.log(<%= raw @user_coordinates.to_json %>)
