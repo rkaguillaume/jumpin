@@ -7,20 +7,21 @@
       <%= f.input :email,
                   required: true,
                   autofocus: true,
-                  input_html: { autocomplete: "email" }%>
+                  input_html: { autocomplete: "email", class: "form-input mt-n2" }%>
       <%= f.input :password,
                   required: true,
                   label: 'Mot de passe',
                   hint: ("#{@minimum_password_length} caractères minimum" if @minimum_password_length),
-                  input_html: { autocomplete: "new-password" } %>
+                  input_html: { autocomplete: "new-password", class: "form-input mt-n2" } %>
       <%= f.input :password_confirmation,
                   required: true,
                   label: 'Confirmation du mot de passe',
-                  input_html: { autocomplete: "new-password" } %>
+                  input_html: { autocomplete: "new-password", class: "form-input mt-n2" } %>
+      <%= f.input :remember_me, as: :hidden, input_html: { value: '1' } if devise_mapping.rememberable? %>
     </div>
 
     <div class="form-actions form-actions-sign-up">
-      <button type="button" class="btn btn-dark">
+      <button type="button" class="btn btn-red btn-lg">
         <%= f.button :submit, "Créer un compte" %>
       </button>
     </div>
