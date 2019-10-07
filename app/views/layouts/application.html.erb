@@ -8,8 +8,9 @@
     <%= render 'application/favicon' %>
 
     <meta name="apple-mobile-web-app-capable" content="yes" />
-    <link href="https://res.cloudinary.com/dcssvcmls/image/upload/v1570458778/jumpintram/imgawaiting/750x1334.png" sizes="750x1334" rel="apple-touch-startup-image" />
-    <link href="https://res.cloudinary.com/dcssvcmls/image/upload/v1570458079/jumpintram/imgawaiting/640x1336.png" sizes="640x1136" rel="apple-touch-startup-image" />
+
+    <link rel="apple-touch-startup-image" href="https://res.cloudinary.com/dcssvcmls/image/upload/v1570458778/jumpintram/imgawaiting/750x1334.png" media="(device-width: 320px) and (device-height: 568px) and (-webkit-device-pixel-ratio: 2) and (orientation: portrait)">
+    <link rel="apple-touch-startup-image" href="https://res.cloudinary.com/dcssvcmls/image/upload/v1570458778/jumpintram/imgawaiting/750x1334.png" media="(device-width: 375px) and (device-height: 667px) and (-webkit-device-pixel-ratio: 2) and (orientation: portrait)">
 
     <%= csrf_meta_tags %>
     <%= action_cable_meta_tag %>
