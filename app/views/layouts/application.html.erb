@@ -25,8 +25,12 @@
   </head>
 
   <body class="<%= content_for(:body_class) %>">
+    <% if content_for? :nav %>
+      <%= content_for :nav %>
+    <% else %>
+      <%= render 'shared/navbar' %>
+    <% end %>
     <%= render 'shared/flyout' %>
-    <%= render 'shared/navbar' %>
     <%= render 'shared/flashes' %>
     <%= render 'shared/nav-bottom' %>
     <%= yield %>

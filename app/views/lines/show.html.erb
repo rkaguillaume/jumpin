@@ -7,14 +7,21 @@
     </div>
      <div>
       <h3 class="direction-line"><%= @line.name %></h3>
-      <h3 class="direction"><span>Choisir la direction</span></h3>
+      <h3 class="direction-text"><span>Choisir la direction</span></h3>
     </div>
   </div>
 <% end %>
+<% content_for :nav, render('shared/navbar_secondary') %>
 
-<%= render "searches/search" %>
+<div class="search-area">
+  <%= render "searches/search" %>
+</div>
 
-<div id="destinations">
+<div class="search-info">
+  Lignes de Tram & de bus
+</div>
+
+<div id="destinations" class="destinations-lines">
 
   <% @line.directions.each do |direction| %>
     <div class="accordion-header">
