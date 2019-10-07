@@ -21,22 +21,17 @@ $search-height: 54px;
     font-weight: 300;
     width: 100%;
     z-index: 2;
-    /* text-align: left; */
     padding-top: 10px;
     padding-left: 25px;
 }
 
 .search {
   width: 100%;
-  // position: fixed;
   position: absolute;
   bottom: 19px;
-  // top: $navbar-height;
-  width: 100%;
   left: 0;
   height: $search-height;
   z-index: 1000;
- // background: #F2F2F2;
   padding: 6px 20px;
   display: flex;
 
@@ -74,3 +69,30 @@ $search-height: 54px;
   top: 130px;
   bottom: 75px;
 }
+
+.icon-area {
+  position: absolute;
+  width: 100%;
+
+  .search-icon {
+    position: relative;
+
+    .icon {
+      position: absolute;
+      top: 6px;
+      right: 47px;
+      width: 30px;
+      height: 30px;
+      background: #ee5f5a;
+      border-radius: 50%;
+      i {
+        position: absolute;
+        top: 8px;
+        left: 8px;
+        color: #fff;
+        font-size: 15px;
+      }
+    }
+  }
+}
+
