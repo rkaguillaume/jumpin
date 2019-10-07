@@ -15,6 +15,10 @@
     <%= render "favorites/actions", stop: @stop %>
   </div>
 <% end %>
+<% content_for :nav, render('shared/navbar_third') %>
+<div class="show-stop-info">
+  <i class="fas fa-sign"></i> <%= @stop.name %>
+</div>
 
 <div id="stop" class="flex-grow-1 d-flex" data-stop-id="<%= @stop.tbm_stop_id %>" data-line-code="<%= @stop.code %>">
 
