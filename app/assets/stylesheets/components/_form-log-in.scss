@@ -14,6 +14,7 @@ form {
 
 .btn {
   color: white;
+  font-weight: 700;
 }
 
 
@@ -40,4 +41,12 @@ form {
   border-color: #ee5f5b;
   outline: 0;
   box-shadow: none;
+}
+
+.registration {
+  font-size: 14px;
+  a {
+    color: #ee5f5b;
+    border-bottom: 1px dashed;
+  }
 }
