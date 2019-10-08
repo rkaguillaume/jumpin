@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html lang="fr">
   <head>
     <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
     <meta charset="UTF-8">
@@ -36,6 +36,7 @@
   </head>
 
   <body class="<%= content_for(:body_class) %>">
+    <a class="skip-link" href="#maincontent">Skip to main</a>
     <% if content_for? :nav %>
       <%= content_for :nav %>
     <% else %>
@@ -44,7 +45,9 @@
     <%= render 'shared/flyout' %>
     <%= render 'shared/flashes' %>
     <%= render 'shared/nav-bottom' %>
-    <%= yield %>
+    <main id="maincontent">
+      <%= yield %>
+    </main>
     <%= javascript_pack_tag 'application' %>
   </body>
 </html>

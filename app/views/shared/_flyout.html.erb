@@ -1,14 +1,14 @@
 <section class="flyout flyout-closed">
   <header class="flyout-header">
     <div class="d-flex justify-content-between">
-      <a class="flyout-close icon-link" href="#">
-          <%= image_tag("burger-menu.svg")  %>
+      <a href="#" class="flyout-close icon-link">
+          <%= image_tag("burger-menu.svg", alt: "Icon JumpInTram")%>
       </a>
     </div>
 
     <div class="flyout-header-content d-flex flex-column aling-items-center text-center">
       <div class="avatar-center">
-        <%= image_tag ("faviconjumpin.png"), class: "avatar" %>
+        <%= image_tag ("faviconjumpin.png"), class: "avatar", alt: "Icon JumpInTram" %>
       </div>
       <% if user_signed_in?  %>
         <span class="text-header">Content de te revoir !</span>
