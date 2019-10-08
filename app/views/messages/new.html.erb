@@ -1,0 +1,19 @@
+<% content_for(:title, "Laissez-nous votre avis") %>
+
+<div class="log-in-form-container">
+  <%= simple_form_for @message, url: create_message_url do |f| %>
+    <div class="font-size-element">
+      <%= f.input :email, label: 'Votre adresse mail (facultatif)' %>
+      <%= f.input :body, as: :text, input_html: {rows: 2}, label: 'Comment pouvons-nous améliorer Catch-Me?' %>
+      <%= f.input :like, as: :text, input_html: {rows: 2}, label: "Qu'appréciez vous dans notre application?" %>
+      <%= f.input :frequencies, label: 'Combien de fois utilisez-vous Catch-Me par semaine?',collection: 1..10 %>
+      <%= f.input :recommendation, label: 'Recommanderiez-vous Catch-Me à un amis?',collection: 1..10 %>
+    </div>
+
+    <div class="form-actions form-actions-sign-up">
+      <%= f.button :submit, value: 'Laisser mon avis', class: 'btn btn-dark' %>
+    </div>
+  <% end %>
+</div>
+
+
