@@ -5,6 +5,9 @@ Rails.application.routes.draw do
   get '/manifest.json' => "service#manifest"
   get '/account' => "pages#account"
 
+  get 'contact-me', to: 'messages#new', as: 'new_message'
+  post 'contact-me', to: 'messages#create', as: 'create_message'
+
   authenticated do
     root :to => 'favorites#index', as: :authenticated
   end
