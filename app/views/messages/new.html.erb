@@ -1,4 +1,5 @@
 <% content_for(:title, "Laissez-nous votre avis") %>
+<% content_for :nav, render('shared/navbar_third') %>
 
 <div class="log-in-form-container">
   <%= simple_form_for @message, url: create_message_url do |f| %>

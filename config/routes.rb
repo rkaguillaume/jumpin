@@ -4,6 +4,7 @@ Rails.application.routes.draw do
   get '/service-worker.js' => "service#service_worker"
   get '/manifest.json' => "service#manifest"
   get '/account' => "pages#account"
+  get '/add-to-home-screen' => "pages#add_app"
 
   get 'contact-me', to: 'messages#new', as: 'new_message'
   post 'contact-me', to: 'messages#create', as: 'create_message'

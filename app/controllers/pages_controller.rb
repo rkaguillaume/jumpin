@@ -8,4 +8,8 @@ class PagesController < ApplicationController
   def account
 
   end
+
+  def add_app
+
+  end
 end
