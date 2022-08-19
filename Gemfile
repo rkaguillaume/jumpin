@@ -4,9 +4,9 @@ ruby '3.1.0'
 gem 'bootsnap', require: false
 gem 'devise'
 gem 'jbuilder', '~> 2.0'
-gem 'pg', '~> 0.21'
+gem 'pg', '~> 1.1'
 gem 'puma'
-gem 'rails', '5.2.2'
+gem 'rails', '~> 6.0'
 gem 'redis'
 gem "http"
 
@@ -22,6 +22,10 @@ gem 'geocoder'
 gem 'inline_svg'
 gem 'rails_real_favicon'
 gem 'font-awesome-sass', '~> 5.6.1'
+
+gem 'net-smtp', require: false
+gem 'net-imap', require: false
+gem 'net-pop', require: false
 
 group :development do
   gem 'web-console', '>= 3.3.0'
